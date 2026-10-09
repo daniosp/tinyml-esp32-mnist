@@ -1,0 +1,16 @@
+# Archivo de proyecto del sketch de Arduino — fija el entorno de compilación exacto.
+# Compilar con:   arduino-cli compile --profile esp32cam
+# El Arduino IDE ignora este archivo; lo usan arduino-cli y la integración continua (CI).
+#
+# TensorFlow Lite Micro (esp-tflite-micro) y el driver de la cámara (esp32-camera)
+# vienen incluidos en el core ESP32, así que fijar la versión del core también los fija a ellos.
+
+profiles:
+  esp32cam:
+    notes: ESP32-CAM-CH340 (compatible con AI-Thinker), PSRAM habilitada por la definición de la placa
+    fqbn: esp32:esp32:esp32cam
+    platforms:
+      - platform: esp32:esp32 (3.3.12)
+        platform_index_url: https://espressif.github.io/arduino-esp32/package_esp32_index.json
+
+default_profile: esp32cam

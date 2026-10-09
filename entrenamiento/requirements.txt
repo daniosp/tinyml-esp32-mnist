@@ -1,0 +1,9 @@
+# Entorno en el que se desarrolló y probó entrenamiento/mnist_tinyml_entrenamiento.ipynb
+# Google Colab, octubre de 2026 — Python 3.13.16
+#
+# En Colab estas librerías ya vienen instaladas. Fíjalas solo si una versión
+# futura de Colab rompe el notebook:  !pip install -q -r requirements.txt
+tensorflow==2.21.0
+numpy==2.1.3
+matplotlib
+scipy

@@ -1,0 +1,25 @@
+# Integración continua: compila todos los sketches del firmware en cada push.
+# Es una prueba pública de que el repositorio compila desde cero usando solo
+# las versiones fijadas en el sketch.yaml de cada sketch.
+name: Compilar firmware
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  compilar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: arduino/setup-arduino-cli@v2
+
+      - name: Compilar todos los sketches (usa el perfil fijado en sketch.yaml)
+        run: |
+          for sketch in firmware/*/; do
+            echo "::group::Compilando $sketch"
+            arduino-cli compile "$sketch"
+            echo "::endgroup::"
+          done

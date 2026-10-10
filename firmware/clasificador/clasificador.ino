@@ -1,5 +1,5 @@
 /*
-  Etapas 5 y 6 — Clasificador de dígitos MNIST en la ESP32-CAM (todo en el dispositivo)
+  Clasificador de dígitos MNIST en la ESP32-CAM (todo en el dispositivo)
   =====================================================================================
 
   cámara (320x240) -> preprocesamiento (28x28 estilo MNIST) -> cuantizar a int8

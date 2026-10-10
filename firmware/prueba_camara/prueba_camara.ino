@@ -1,5 +1,5 @@
 /*
-  Etapa 0 — Prueba de funcionamiento del hardware de la ESP32-CAM
+  Prueba de funcionamiento del hardware de la ESP32-CAM
   ================================================================
 
   Objetivo: antes de cualquier aprendizaje automático, comprobar que funciona
